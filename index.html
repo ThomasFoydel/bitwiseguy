@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>BITWISE GUY</title>
+  </head>
+  <body>
+    <h1>BITWISE GUY</h1>
+    <div class="container">
+      <div>
+        <input type="number" id="input-one" />
+        <div id="display-one">
+          <div class="bin"></div>
+          <div class="hex"></div>
+        </div>
+      </div>
+      <div>
+        <input type="number" id="input-two" />
+        <div id="display-two">
+          <div class="bin"></div>
+          <div class="hex"></div>
+        </div>
+      </div>
+      <select id="selector">
+        <option value="and">and</option>
+        <option value="or">or</option>
+        <option value="not">not</option>
+        <option value="xor">xor</option>
+        <option value="leftShift">left shift</option>
+        <option value="rightShift">right shift</option>
+        <option value="rightShiftZero">right shift zero</option>
+      </select>
+      <button id="apply">apply</button>
+      <div>output: <span id="output"></span></div>
+      <div id="output-bin"></div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
