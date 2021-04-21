@@ -1,6 +1,7 @@
 const applyBtn = document.getElementById('apply');
 const outputEl = document.getElementById('output');
 const outputBin = document.getElementById('output-bin');
+const outputHex = document.getElementById('output-hex');
 const displayOne = document.getElementById('display-one');
 const displayTwo = document.getElementById('display-two');
 let inputOne = document.getElementById('input-one');
@@ -23,6 +24,7 @@ applyBtn.addEventListener('click', () => {
     const output = bitOps[op](valueOne, valueTwo);
     outputEl.textContent = output;
     outputBin.textContent = (output >>> 0).toString(2);
+    outputHex.textContent = Number(output).toString(16);
   }
 });
 
