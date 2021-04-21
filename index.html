@@ -9,35 +9,46 @@
   </head>
   <body>
     <h1>BITWISE GUY</h1>
-    <div class="container">
-      <div>
-        <input type="number" id="input-one" />
-        <div id="display-one">
-          <div class="bin"></div>
-          <div class="hex"></div>
+    <div class="input-container">
+      <h2>INPUT</h2>
+      <div class="inputs">
+        <div>
+          <input type="number" id="input-one" value="0" />
+          <div id="display-one">
+            <p class="bin">0</p>
+            <p class="hex">0</p>
+          </div>
+        </div>
+        <div>
+          <input type="number" id="input-two" value="0" />
+          <div id="display-two">
+            <p class="bin">0</p>
+            <p class="hex">0</p>
+          </div>
         </div>
       </div>
       <div>
-        <input type="number" id="input-two" />
-        <div id="display-two">
-          <div class="bin"></div>
-          <div class="hex"></div>
-        </div>
+        <h2>OPERATION</h2>
+        <select id="selector">
+          <option value="and">and</option>
+          <option value="or">or</option>
+          <option value="not">not</option>
+          <option value="xor">xor</option>
+          <option value="leftShift">left shift</option>
+          <option value="rightShift">right shift</option>
+          <option value="rightShiftZero">right shift zero</option>
+        </select>
       </div>
-      <select id="selector">
-        <option value="and">and</option>
-        <option value="or">or</option>
-        <option value="not">not</option>
-        <option value="xor">xor</option>
-        <option value="leftShift">left shift</option>
-        <option value="rightShift">right shift</option>
-        <option value="rightShiftZero">right shift zero</option>
-      </select>
-      <button id="apply">apply</button>
-      <div>output: <span id="output"></span></div>
-      <div id="output-bin"></div>
-      <div id="output-hex"></div>
     </div>
+    <div class="output-container">
+      <h2>OUPUT</h2>
+      <div class="outputs">
+        <div><strong>decimal:</strong> <span id="output">0</span></div>
+        <div><strong>binary:</strong> <span id="output-bin">0</span></div>
+        <div><strong>hex:</strong> <span id="output-hex">0</span></div>
+      </div>
+    </div>
+    <img class="bot" src="./bot.png" alt="robot" />
 
     <script src="./script.js"></script>
   </body>
