@@ -6,6 +6,7 @@ const displayTwo = document.getElementById('display-two');
 const selector = document.getElementById('selector');
 const inputOne = document.getElementById('input-one');
 const inputTwo = document.getElementById('input-two');
+const inputTwoContainer = document.getElementById('input-two-container');
 
 const bitOps = {
   and: (a, b) => a & b,
@@ -29,12 +30,22 @@ const calculate = () => {
   }
 };
 
-selector.addEventListener('change', calculate);
+selector.addEventListener('change', ({ target: { value } }) => {
+  if (value === 'not') {
+    inputTwoContainer.classList.add('clear');
+    setTimeout(() => {
+      inputTwoContainer.classList.add('hidden');
+    }, 500);
+  } else {
+    inputTwoContainer.classList.remove('hidden');
+    inputTwoContainer.classList.remove('clear');
+  }
+  calculate();
+});
 
 const handleInput = ({ target: { value, id } }) => {
   const bin = (value >>> 0).toString(2);
   const hex = Number(value).toString(16);
-  console.dir(displayOne);
   if (id === 'input-one') {
     displayOne.children[0].textContent = bin;
     displayOne.children[1].textContent = hex;
